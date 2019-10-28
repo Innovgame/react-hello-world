@@ -1,7 +1,7 @@
 var webpack = require('webpack')
 var path = require('path')
 var APP_DIR = path.resolve(__dirname, 'src')
-var BUILD_DIR = path.resolve(__dirname, 'build')
+var BUILD_DIR = path.resolve(__dirname, 'dist')
 
 var config = {
     entry: APP_DIR + '/index.jsx',
@@ -25,6 +25,10 @@ var config = {
                 }
             }
         ]
+    },
+    devServer: {
+        port: 3000,
+        contentBase: './dist'
     }
 }
 
