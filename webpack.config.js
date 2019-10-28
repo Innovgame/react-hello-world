@@ -1,5 +1,6 @@
 var webpack = require('webpack')
 var path = require('path')
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 var APP_DIR = path.resolve(__dirname, 'src')
 var BUILD_DIR = path.resolve(__dirname, 'dist')
 
@@ -29,7 +30,15 @@ var config = {
     devServer: {
         port: 3000,
         contentBase: './dist'
-    }
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: 'index.html',
+            inject: true,
+            sourceMap: true,
+            chunksSortMode: 'dependency'
+        }),
+    ]
 }
 
 module.exports = config
