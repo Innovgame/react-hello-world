@@ -1,6 +1,7 @@
 var webpack = require('webpack')
 var path = require('path')
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 var APP_DIR = path.resolve(__dirname, 'src')
 var BUILD_DIR = path.resolve(__dirname, 'dist')
 
@@ -32,12 +33,13 @@ var config = {
         contentBase: './dist'
     },
     plugins: [
+        new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             template: 'index.html',
             inject: true,
             sourceMap: true,
             chunksSortMode: 'dependency'
-        }),
+        })
     ]
 }
 
