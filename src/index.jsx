@@ -3,8 +3,20 @@ import { render } from 'react-dom';
 
 class App extends React.Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            todoItem: '',
+            items: []
+        }
+    }
+
     render() {
-        return <p>echo: Hello React Again !!! </p>
+        return (
+            <div>
+                
+            </div>
+        );
     }
 }
 
