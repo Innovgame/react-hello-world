@@ -15,9 +15,7 @@ var config = {
         rules: [
             {
                 test: /\.css$/,
-                use: {
-                    loader: 'style-loader! css-loader'
-                }
+                loader: 'style-loader!css-loader'
             },
             {
                 test: /\.(js|jsx)$/,
