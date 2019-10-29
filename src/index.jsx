@@ -5,6 +5,7 @@ import './index.css'
 
 import ListItems from './ListItems';
 import Header from './Header';
+import AddItem from './AddItem';
 
 class App extends React.Component {
 
@@ -37,10 +38,7 @@ class App extends React.Component {
         return (
             <div className="container">
                 <Header title="Todo List" />
-                <form className="form-wrap" onSubmit={this.onSubmit}>
-                    <input value={this.state.todoItem} onChange={this.onChange} />
-                    <button>Submit</button>
-                </form>
+                <AddItem onSubmit={this.onSubmit} onChange={this.onChange} todoItem={this.state.todoItem} />
                 <ListItems items={this.state.items} />
             </div>
         );
