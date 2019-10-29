@@ -11,7 +11,7 @@ class App extends React.Component {
         super(props);
         this.state = {
             todoItem: '',
-            items: ['吃香蕉', '吃苹果', '打篮球']
+            items: ['吃香蕉🍌', '吃苹果🍎', '打篮球🏀']
         }
     }
 
