@@ -1,5 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
+import PropTypes from 'prop-types';
 import './index.css'
 
 import ListItems from './ListItems';
@@ -45,6 +46,12 @@ class App extends React.Component {
         );
     }
 }
+
+App.propTypes = {
+    items: PropTypes.array,
+    onChange: PropTypes.func,
+    onSubmit: PropTypes.func,
+};
 
 render(
     <App/>,
